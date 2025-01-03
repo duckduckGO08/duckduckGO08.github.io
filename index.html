@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>给最美的人</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+        
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+        }
+        
+        .login-container {
+            text-align: center;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        input {
+            padding: 10px;
+            margin: 10px 0;
+            width: 300px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        button {
+            padding: 10px 20px;
+            background-color: #1877f2;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .hidden {
+            display: none !important;
+        }
+        
+        .image-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        
+        .image-container h1 {
+            color: white;
+            margin: 20px;
+            z-index: 2;
+            font-family: 'Dancing Script', cursive;
+            font-size: 3rem;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8),
+                         -2px -2px 8px rgba(0, 0, 0, 0.8),
+                         2px -2px 8px rgba(0, 0, 0, 0.8),
+                         -2px 2px 8px rgba(0, 0, 0, 0.8);
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 20px 40px;
+            border-radius: 15px;
+            backdrop-filter: blur(5px);
+            animation: fadeIn 1.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="loginForm" class="login-container">
+        <h2>The most beautiful water drinker is behind the scene?</h2>
+        <h3>Type in his/her birthday.</h3>
+        <input type="text" id="password" placeholder="YYYYMMDD">
+        <br>
+        <button onclick="checkPassword()">确认</button>
+    </div>
+    
+    <div id="content" class="image-container hidden">
+        <h1>She is the most beautiful water drinker, isn't she?</h1>
+        <img src="your-image.jpg" alt="Beautiful water drinker">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
